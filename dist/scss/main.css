@@ -451,3 +451,12 @@ header .action .notify::before {
 .products table td img {
   width: 2.5rem;
 }
+
+.customers {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+}
+.customers .head {
+  margin-bottom: 2rem;
+}

@@ -241,5 +241,14 @@ header {
   }
 }
 
+.customers{
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  .head{
+    margin-bottom: 2rem;
+  }
+}
+
 @import 'theme';
 @import 'media';
