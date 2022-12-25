@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carti | Iroh Joshua</title>
+  <link rel="shortcut icon" href="dist/img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="dist/fonts/unicons/css/line.css">
+  <link rel="stylesheet" href="dist/fonts/eva-icons/eva-icons.css">
+  <link rel="stylesheet" href="dist/fonts/feather-icons-sass/feather.css">
+  <link rel="stylesheet" href="dist/scss/main.css">
+</head>
+
+<body>
+  <aside>
+    <a href="./" class="logo">
+      <img src="dist/img/logo.png" alt="">
+      <h2>carti</h2>
+    </a>
+
+    <div class="links">
+      <a href="#" class="active"><i class="icon-grid"></i>
+        <h3>overview</h3>
+      </a>
+      <a href="#"><i class="uil uil-shopping-cart-alt"></i>
+        <h3>orders</h3> <small class="count">1</small>
+      </a>
+      <a href="#"><i class="eva eva-briefcase-outline"></i>
+        <h3>products</h3>
+      </a>
+      <a href="#"><i class="eva eva-people-outline"></i>
+        <h3>costumers</h3>
+      </a>
+      <a href="#"><i class="icon-bar-graph-2"></i>
+        <h3>reports</h3>
+      </a>
+      <a href="#"><i class="uil uil-wallet"></i>
+        <h3>transactions</h3>
+      </a>
+      <a href="#"><i class="eva eva-car-outline"></i>
+        <h3>shipment</h3>
+      </a>
+
+      <div class="control">
+        <a href="#"><i class="eva eva-info-outline"></i>
+          <h3>help</h3>
+        </a>
+        <a href="#"><i class="uil uil-setting"></i>
+          <h3>settings</h3>
+        </a>
+        <a href="#"><i class="eva eva-log-out"></i>
+          <h3>logout</h3>
+        </a>
+      </div>
+
+      <!-- <div class="ad">
+        <img src="dist/img/logo.png" alt="">
+        <h2>carti pro</h2>
+        <small>Get access to all features on Carti</small>
+        <button class="btn">go pro</button>
+      </div> -->
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h1>Dashboard</h1>
+        <small class="mute">Detailed info about your store</small>
+      </div>
+
+      <div class="action">
+        <div class="search">
+          <i class="uil uil-search"></i>
+          <input type="text" placeholder="Search....">
+        </div>
+        <span class="notify"><i class="eva eva-bell-outline"></i></span>
+        <div class="profile">
+          <img src="dist/img/users/desean-robinson.jpg" alt="">
+          <div class="handle">
+            <h3>desean robinson <i class="uil-angle-down"></i></h3>
+            <small class="mute">Admin</small>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="analysis">
+      <div class="warning">
+        <span class="icon"><i class="uil uil-shopping-cart-alt"></i></span>
+        <div>
+          <p class="mute">Orders completed</p>
+          <h2>1.257k</h2>
+        </div>
+      </div>
+      <div class="success">
+        <span class="icon"><i class="uil uil-arrow-growth"></i></span>
+        <div>
+          <p class="mute">Total revenue made</p>
+          <h2>$185k</h2>
+        </div>
+      </div>
+      <div class="primary">
+        <span class="icon"><i class="eva eva-person-outline"></i></span>
+        <div>
+          <p class="mute">Total store visits</p>
+          <h2>1.75m</h2>
+        </div>
+      </div>
+      <div class="info">
+        <span class="icon"><i class="eva eva-pie-chart-outline"></i></span>
+        <div>
+          <p class="mute">Total sales made</p>
+          <h2>25.7k</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart">
+      <div class="head">
+        <p class="mute">Revenue this week</p>
+        <span><i class="primary icon-bar-graph"></i></span>
+      </div>
+      <canvas id="chart"></canvas>
+    </div>
+
+    <div class="store-overview">
+      <div class="head">
+        <div>
+          <h2>store visits</h2> <small class="mute">Details about your store visits</small>
+        </div>
+        <span class="mute"><i class="eva eva-edit-outline"></i></span>
+      </div>
+      <div class="ads">
+        <div class="flex">
+          <span class="icon"><i class="eva eva-person-outline"></i></span>
+          <div>
+            <h3>Pro analytics</h3>
+            <small class="primary">$8/mo</small>
+          </div>
+        </div>
+
+        <i class="primary uil uil-angle-right-b"></i>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="flex">
+            <p>Men</p> <span>70%</span>
+          </div>
+          <div class="percent men"></div>
+        </div>
+        <div class="stat">
+          <div class="flex">
+            <p>Women</p> <span>39%</span>
+          </div>
+          <div class="percent women"></div>
+        </div>
+        <div class="stat">
+          <div class="flex">
+            <p>Visits/day</p> <span>54%</span>
+          </div>
+          <div class="percent visits"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      <div class="head">
+        <div>
+          <h2>top products</h2> <small class="mute">best selling products in your store</small>
+        </div>
+        <span class="mute"><i class="eva eva-edit-outline"></i></span>
+      </div>
+      <table>
+        <tr>
+          <th class="mute"><i class="uil uil-circle"></i></th>
+          <th class="mute">Product name</th>
+          <th class="mute">Date added</th>
+          <th class="mute">Price</th>
+          <th class="mute">Total Earning</th>
+        </tr>
+        <tr>
+          <td class="primary"><i class="uil uil-check-circle"></i></td>
+          <td class="good">
+            <img src="dist/img/goods/macbookair.jpg" alt="">
+            <h3>15 inch Macbook Air with retina display</h3>
+          </td>
+          <td>
+            <h3>November 22 2022</h3>
+          </td>
+          <td><button class="btn primary">$1200</button></td>
+          <td><button class="btn success">$49,200</button></td>
+          <td><i class="eva eva-more-vertical-outline"></i></td>
+        </tr>
+        <tr>
+          <td class="mute"><i class="uil uil-circle"></i></td>
+          <td class="good">
+            <img src="dist/img/goods/asusrog.jpg" alt="">
+            <h3>15 inch Asus ROG gaming laptopy</h3>
+          </td>
+          <td>
+            <h3>November 22 2022</h3>
+          </td>
+          <td><button class="btn primary">$5000</button></td>
+          <td><button class="btn success">$48,000</button></td>
+          <td><i class="eva eva-more-vertical-outline"></i></td>
+        </tr>
+        <tr>
+          <td class="primary"><i class="uil uil-check-circle"></i></td>
+          <td class="good">
+            <img src="dist/img/goods/corei9.jpg" alt="">
+            <h3>Intel core i9 series</h3>
+          </td>
+          <td>
+            <h3>November 22 2022</h3>
+          </td>
+          <td><button class="btn primary">$499</button></td>
+          <td><button class="btn success">$4990</button></td>
+          <td><i class="eva eva-more-vertical-outline"></i></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="customers"></div>
+  </main>
+
+  <script src="dist/node_modules/chart.js/dist/chart.umd.js"></script>
+  <script src="dist/js/chart.js"></script>
+</body>
+
+</html>

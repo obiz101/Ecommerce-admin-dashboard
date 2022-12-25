@@ -1,0 +1,453 @@
+:root {
+  --dark: #1b2558;
+  --white: #fff;
+  --light: #f8f9fb;
+  --grey: #8d96b5;
+  --primary: #3ee0cf;
+  --info: #fc2254;
+  --warning: #ff6b01;
+  --success: #3ee074;
+  --padding: 1.5rem;
+  --card-padding: 3rem;
+  --border-radius: 1.2rem;
+  --box-shadow: 0 0 1rem var(--light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: 0;
+  letter-spacing: -0.625px;
+  outline: none;
+}
+
+html {
+  font-size: 0.85rem;
+  color: var(--dark);
+}
+
+body {
+  background: var(--light);
+  display: grid;
+  grid-template-columns: 15rem auto;
+  cursor: default;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+::-moz-placeholder {
+  color: var(--grey);
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+:-ms-input-placeholder {
+  color: var(--grey);
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+::placeholder {
+  color: var(--grey);
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+i {
+  font-size: 1.125rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.profile img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--white);
+  padding: 0.3rem var(--padding);
+  border-radius: var(--border-radius);
+}
+.search i {
+  color: var(--primary);
+}
+.search input {
+  background: transparent;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mute {
+  color: var(--grey);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.info {
+  color: var(--info);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.success {
+  color: var(--success);
+}
+
+.btn {
+  padding: 0.5rem var(--padding);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+.btn.primary {
+  background: rgba(62, 224, 207, 0.1254901961);
+}
+.btn.success {
+  background: rgba(62, 224, 116, 0.1254901961);
+}
+.btn.warning {
+  background: rgba(255, 107, 1, 0.1254901961);
+}
+
+.count {
+  background: var(--info);
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+aside {
+  height: 100vh;
+  background: var(--white);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+aside .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 15%;
+  padding-bottom: 0;
+}
+aside .logo img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+aside .logo h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+aside .links {
+  margin-top: 2.5rem;
+}
+aside .links a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  margin: 0.75rem 0;
+  padding: 0 15%;
+  color: var(--grey);
+  position: relative;
+}
+aside .links a .count {
+  position: absolute;
+  right: 15%;
+}
+aside .links a i {
+  font-size: 1.125rem;
+}
+aside .links a.active {
+  color: var(--primary);
+}
+aside .links a.active::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--primary);
+  border-radius: var(--border-radius);
+}
+aside .control {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  position: relative;
+}
+aside .control::before {
+  content: "";
+  width: 70%;
+  left: 15%;
+  height: 2px;
+  position: absolute;
+  border-radius: 0.5rem;
+  top: 0;
+  background: var(--light);
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  grid-column: 1/span 3;
+  height: 4rem;
+  gap: 1rem;
+}
+header .action {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+header .action .profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1;
+}
+header .action .notify {
+  font-size: 1.25rem;
+  position: relative;
+  cursor: pointer;
+}
+header .action .notify::before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  top: 0.2rem;
+  right: 0.2rem;
+  background: var(--primary);
+  border-radius: var(--border-radius);
+}
+
+.analysis {
+  background: var(--white);
+  width: 100%;
+  grid-column: 1/span 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--card-padding);
+  border-radius: var(--border-radius);
+}
+.analysis > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.analysis > div:not(:last-child) {
+  border-right: 2px solid var(--light);
+  padding-right: 4rem;
+}
+.analysis .warning .icon {
+  background: rgba(255, 107, 1, 0.1254901961);
+}
+.analysis .success .icon {
+  background: rgba(62, 224, 116, 0.1254901961);
+}
+.analysis .primary .icon {
+  background: rgba(62, 224, 207, 0.1254901961);
+}
+.analysis .info .icon {
+  background: rgba(252, 34, 84, 0.1254901961);
+}
+.analysis .icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.chart {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: var(--padding);
+  grid-column: 1/span 2;
+}
+.chart span {
+  background: rgba(62, 224, 207, 0.1254901961);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.45rem;
+}
+
+.store-overview {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+}
+.store-overview .head {
+  margin-bottom: 2rem;
+}
+.store-overview .head i {
+  font-size: 1.25rem;
+}
+.store-overview .ads {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.store-overview .icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background: rgba(62, 224, 116, 0.1254901961);
+  color: var(--primary);
+}
+.store-overview .stat {
+  margin-bottom: 1rem;
+}
+.store-overview .stat .flex {
+  width: 100%;
+  justify-content: space-between !important;
+  display: flex;
+}
+.store-overview .stat .percent {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background: var(--light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.store-overview .stat .percent::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: var(--border-radius);
+}
+.store-overview .stat .percent.men {
+  background: rgba(62, 224, 207, 0.1254901961);
+}
+.store-overview .stat .percent.men::before {
+  background: var(--primary);
+  width: 70%;
+}
+.store-overview .stat .percent.women {
+  background: rgba(252, 34, 84, 0.1254901961);
+}
+.store-overview .stat .percent.women::before {
+  background: var(--info);
+  width: 39%;
+}
+.store-overview .stat .percent.visits {
+  background: rgba(255, 107, 1, 0.1254901961);
+}
+.store-overview .stat .percent.visits::before {
+  background: var(--warning);
+  width: 54%;
+}
+
+.products {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: var(--padding);
+  grid-column: 1/span 2;
+}
+.products table {
+  text-align: left;
+  border-spacing: 0.75rem;
+  width: 100%;
+}
+.products table th {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.products table td {
+  padding-right: 1rem;
+  padding: 0.5rem 0;
+}
+.products table td.good {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.products table td img {
+  width: 2.5rem;
+}

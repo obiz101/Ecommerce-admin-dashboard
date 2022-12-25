@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  border: 0;
+  letter-spacing: -0.625px;
+  outline: none;
+}
+
+html {
+  font-size: 0.85rem;
+  color: var(--dark);
+}
+
+body {
+  background: var(--light);
+  display: grid;
+  grid-template-columns: 15rem auto;
+  cursor: default;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+::placeholder {
+  color: var(--grey);
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+i {
+  font-size: 1.125rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+// REUSABLE CLASSES
+.profile {
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--white);
+  padding: 0.3rem var(--padding);
+  border-radius: var(--border-radius);
+  i{
+    color: var(--primary);
+  }
+  input {
+    background: transparent;
+  }
+}
+
+.head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mute {
+  color: var(--grey);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.info {
+  color: var(--info);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.success {
+  color: var(--success);
+}
+
+.btn {
+  padding: 0.5rem var(--padding);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  &.primary {
+    background: #3ee0cf20;
+  }
+  &.success {
+    background: #3ee07420;
+  }
+  &.warning {
+    background: #ff6b0120;
+  }
+}
+
+.count {
+  background: var(--info);
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+}
