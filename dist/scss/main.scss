@@ -24,8 +24,13 @@ main {
   gap: 1rem;
   padding: 0.5rem 2rem;
   grid-template-columns: repeat(3, 1fr);
-  height: max-content;
+  >div{
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+  }
 }
+
 
 header {
   display: flex;
@@ -65,14 +70,10 @@ header {
 }
 
 .analysis {
-  background: var(--white);
-  width: 100%;
   grid-column: 1 / span 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--card-padding);
-  border-radius: var(--border-radius);
 
   > div {
     display: flex;
@@ -117,10 +118,7 @@ header {
 }
 
 .chart {
-  background: var(--white);
-  border-radius: var(--border-radius);
   width: 100%;
-  padding: var(--padding);
   grid-column: 1 / span 2;
 
   span {
@@ -135,9 +133,6 @@ header {
 }
 
 .store-overview {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: var(--padding);
 
   .head {
     margin-bottom: 2rem;
@@ -241,12 +236,28 @@ header {
   }
 }
 
-.customers{
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: var(--padding);
-  .head{
+.customers {
+  .head {
     margin-bottom: 2rem;
+  }
+  .customer {
+    display: flex;
+    li {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      &::marker{
+        font-size: 1.25rem;
+      }
+      &:first-child::marker {
+        color: var(--primary);
+      }
+      &:nth-child(2)::marker {
+        color: var(--success);
+      }
+      &:nth-child(3)::marker {
+        color: var(--warning);
+      }
+    }
   }
 }
 

@@ -19,7 +19,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   border: 0;
-  letter-spacing: -0.625px;
   outline: none;
 }
 
@@ -249,9 +248,11 @@ main {
   gap: 1rem;
   padding: 0.5rem 2rem;
   grid-template-columns: repeat(3, 1fr);
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+}
+main > div {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
 }
 
 header {
@@ -292,14 +293,10 @@ header .action .notify::before {
 }
 
 .analysis {
-  background: var(--white);
-  width: 100%;
   grid-column: 1/span 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--card-padding);
-  border-radius: var(--border-radius);
 }
 .analysis > div {
   display: flex;
@@ -333,10 +330,7 @@ header .action .notify::before {
 }
 
 .chart {
-  background: var(--white);
-  border-radius: var(--border-radius);
   width: 100%;
-  padding: var(--padding);
   grid-column: 1/span 2;
 }
 .chart span {
@@ -349,11 +343,6 @@ header .action .notify::before {
   border-radius: 0.45rem;
 }
 
-.store-overview {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: var(--padding);
-}
 .store-overview .head {
   margin-bottom: 2rem;
 }
@@ -452,11 +441,25 @@ header .action .notify::before {
   width: 2.5rem;
 }
 
-.customers {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: var(--padding);
-}
 .customers .head {
   margin-bottom: 2rem;
+}
+.customers .customer {
+  display: flex;
+}
+.customers .customer li {
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+.customers .customer li::marker {
+  font-size: 1.25rem;
+}
+.customers .customer li:first-child::marker {
+  color: var(--primary);
+}
+.customers .customer li:nth-child(2)::marker {
+  color: var(--success);
+}
+.customers .customer li:nth-child(3)::marker {
+  color: var(--warning);
 }
