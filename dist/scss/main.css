@@ -10,7 +10,7 @@
   --padding: 1.5rem;
   --card-padding: 3rem;
   --border-radius: 1.2rem;
-  --box-shadow: 0 0 1rem var(--light);
+  --box-shadow: 0 0 1rem #1b255810;
 }
 
 * {
@@ -109,6 +109,10 @@ small {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+.head i {
+  cursor: pointer;
+  font-size: 1.3rem;
 }
 
 .flex {
@@ -250,9 +254,23 @@ main {
   grid-template-columns: repeat(3, 1fr);
 }
 main > div {
+  display: grid;
+  gap: 1rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+main > div > div {
   background: var(--white);
   border-radius: var(--border-radius);
   padding: var(--padding);
+  box-shadow: var(--box-shadow);
+}
+main .span-2 {
+  grid-column: 1/span 2;
+}
+main .span-1 {
+  grid-column: 3;
 }
 
 header {
@@ -302,6 +320,7 @@ header .action .notify::before {
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 .analysis > div:not(:last-child) {
   border-right: 2px solid var(--light);
@@ -331,7 +350,6 @@ header .action .notify::before {
 
 .chart {
   width: 100%;
-  grid-column: 1/span 2;
 }
 .chart span {
   background: rgba(62, 224, 207, 0.1254901961);
@@ -417,7 +435,6 @@ header .action .notify::before {
   border-radius: var(--border-radius);
   width: 100%;
   padding: var(--padding);
-  grid-column: 1/span 2;
 }
 .products table {
   text-align: left;
@@ -447,19 +464,41 @@ header .action .notify::before {
 .customers .customer {
   display: flex;
 }
+.customers .customer ul {
+  width: 100%;
+}
 .customers .customer li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-left: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 500;
+  position: relative;
 }
-.customers .customer li::marker {
-  font-size: 1.25rem;
+.customers .customer li::before {
+  position: absolute;
+  left: -1rem;
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--border-radius);
 }
-.customers .customer li:first-child::marker {
+.customers .customer li:first-child {
   color: var(--primary);
 }
-.customers .customer li:nth-child(2)::marker {
+.customers .customer li:first-child::before {
+  background-color: var(--primary);
+}
+.customers .customer li:nth-child(2) {
   color: var(--success);
 }
-.customers .customer li:nth-child(3)::marker {
+.customers .customer li:nth-child(2)::before {
+  background-color: var(--success);
+}
+.customers .customer li:nth-child(3) {
   color: var(--warning);
+}
+.customers .customer li:nth-child(3)::before {
+  background-color: var(--warning);
 }

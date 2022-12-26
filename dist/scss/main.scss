@@ -13,7 +13,7 @@
   --card-padding: 3rem;
   --border-radius: 1.2rem;
 
-  --box-shadow: 0 0 1rem var(--light);
+  --box-shadow: 0 0 1rem #1b255810;
 }
 
 @import 'globals';
@@ -24,13 +24,24 @@ main {
   gap: 1rem;
   padding: 0.5rem 2rem;
   grid-template-columns: repeat(3, 1fr);
-  >div{
-    background: var(--white);
-    border-radius: var(--border-radius);
-    padding: var(--padding);
+  > div {
+    display: grid;
+    gap: 1rem;
+    height: max-content;
+    > div {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: var(--padding);
+      box-shadow: var(--box-shadow);
+    }
+  }
+  .span-2 {
+    grid-column: 1 / span 2;
+  }
+  .span-1 {
+    grid-column: 3;
   }
 }
-
 
 header {
   display: flex;
@@ -79,6 +90,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    width: 100%;
     &:not(:last-child) {
       border-right: 2px solid var(--light);
       padding-right: 4rem;
@@ -119,7 +131,6 @@ header {
 
 .chart {
   width: 100%;
-  grid-column: 1 / span 2;
 
   span {
     background: #3ee0cf20;
@@ -133,7 +144,6 @@ header {
 }
 
 .store-overview {
-
   .head {
     margin-bottom: 2rem;
     i {
@@ -212,7 +222,6 @@ header {
   border-radius: var(--border-radius);
   width: 100%;
   padding: var(--padding);
-  grid-column: 1 / span 2;
   table {
     text-align: left;
     border-spacing: 0.75rem;
@@ -242,20 +251,42 @@ header {
   }
   .customer {
     display: flex;
+    ul {
+      width: 100%;
+    }
     li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-left: 1.5rem;
+      margin-bottom: 1rem;
       font-weight: 500;
-      &::marker{
-        font-size: 1.25rem;
+      position: relative;
+      &::before {
+        position: absolute;
+        left: -1rem;
+        content: '';
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: var(--border-radius);
       }
-      &:first-child::marker {
+      &:first-child {
         color: var(--primary);
+        &::before {
+          background-color: var(--primary);
+        }
       }
-      &:nth-child(2)::marker {
+      &:nth-child(2) {
         color: var(--success);
+        &::before {
+          background-color: var(--success);
+        }
       }
-      &:nth-child(3)::marker {
+      &:nth-child(3) {
         color: var(--warning);
+        &::before {
+          background-color: var(--warning);
+        }
       }
     }
   }
