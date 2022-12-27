@@ -55,17 +55,45 @@ let barOptions = {
         {
           offset: 0,
           opacity: 0.2,
-          color: '#fff',
+          color: primary,
         },
         {
           offset: 100,
           opacity: 0.2,
-          color: '#fff',
+          color: '#3ee0cf20',
         },
       ],
     },
   },
   stroke: { colors: [primary], lineCap: 'round' },
+  grid: {
+    borderColor: 'rgba(0, 0, 0, 0)',
+  },
+  markers: {
+    strokeColors: primary,
+  },
+  yaxis: {
+    labels: {
+      show: true,
+      float: true,
+      style: {
+        fontFamily: font,
+      },
+    },
+    axisBorder: {
+      show: true,
+    },
+  },
+  xaxis: {
+    labels: {
+      show: true,
+      float: true,
+      style: {
+        fontFamily: font,
+      },
+    },
+    categories: ['Feb', 'Apr', 'June', 'Aug', 'Oct', 'Dec'],
+  },
 };
 
 let chart = new ApexCharts(document.querySelector('#chart'), barOptions);
