@@ -7,6 +7,7 @@
   --info: #fc2254;
   --warning: #ff6b01;
   --success: #3ee074;
+  --font: "Poppins", sans-serif;
   --padding: 1.5rem;
   --card-padding: 3rem;
   --border-radius: 1.2rem;
@@ -17,7 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font) !important;
   border: 0;
   outline: none;
 }
